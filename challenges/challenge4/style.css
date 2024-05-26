@@ -1,0 +1,154 @@
+body {
+  background-color: #f3c742; 
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center; /* Added to center the title */
+}
+
+#gameTitle {
+  margin-bottom: 20px;
+  color: #ffffbd;
+}
+
+#map {
+  height: 280px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+header {
+  text-align: center;
+}
+
+header a.link {
+  display: block;
+  margin: 1em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.btn {
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#feedback {
+  font-weight: bold;
+}
+
+section.data {}
+
+@media only screen and (min-width: 600px) {
+  .buttons {
+    display: block;
+  }
+
+  header,
+  section.map-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  #map {
+    height: 60vw;
+    max-height: 70vh;
+  }
+}
+
+/* New styles for question form */
+.question {
+  background-color: #ffffbd;
+  color: #f3c742;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.question h2 {
+  margin-top: 0;
+}
+
+.question input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 10px;
+  color: beige;
+  background-color: #f3c742;
+  border: 2px solid #f3c742;
+  border-radius: 5px;
+}
+
+.question input[type="text"]::placeholder {
+  color: #ffffbd;
+}
+
+.question button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffbd;
+  color: #e0b537;
+  border: 1px solid #f3c742;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.question button:hover {
+  background-color: #e0b537;
+  color: #ffffbd;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffbd;
+  color: #e0b537;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #e0b537;
+  color: #ffffbd;
+}
+
+.correct {
+  color: green;
+  border-color: green;
+}
+
+.wrong {
+  color: red;
+  border-color: red;
+}

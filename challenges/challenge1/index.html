@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Basketball Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Basketball Quiz</h1>
+    <div id="startScreen" class="screen">
+      <button id="startButton" class="button">Start Quiz</button>
+    </div>
+    <div id="question-container" class="screen" style="display: none;">
+      <p id="question"></p>
+      <ul id="options"></ul>
+      <button id="speakQuestionBtn" class="button">Read Question</button>
+      <button id="speakAnswerBtn" class="button">Speak Your Answer</button>
+      <p id="result"></p>
+    </div>
+    <div id="endScreen" class="screen" style="display: none;">
+      <h1 id="endMessage">Quiz Over</h1>
+      <h2 id="finalScore">Your Score: 0/10</h2>
+      <button id="retryButton" class="button">Retry</button>
+    </div>
+  </div>
+  <script defer src="main.js"></script>
+</body>
+</html>
+

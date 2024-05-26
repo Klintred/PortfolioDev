@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3c742; 
+}
+#video-container {
+  position: relative;
+  width: 640px;
+  height: 480px;
+}
+#webcam, #captured-frame {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+#canvas {
+  display: none;
+}
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffbd;
+  color: #e0b537;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; 
+}
+.button:hover {
+  background-color: #e0b537;
+  color: #ffffbd;
+}
+#model-feedback {
+  position: absolute;
+  bottom: 520px; 
+  width: 100%;
+  text-align: center;
+  color: #ffffbd;
+  font-size: 24px;
+  font-family: 'Trebuchet MS', sans-serif;
+  display: none;
+  animation: slideDown 1s forwards;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,77 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f3c742; 
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 640px;
+  position: absolute;
+  top: 20px;
+}
+
+.header span {
+  font-size: 32px;
+  color: #000;
+}
+
+#title {
+  color: #ffffbd;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffbd;
+  color: #e0b537;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+button:hover {
+  background-color: #e0b537;
+  color: #ffffbd;
+}
+
+#instructionsScreen p {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+#endScreen h1 {
+  font-size: 48px;
+}
+
+#endScreen h2 {
+  font-size: 36px;
+}

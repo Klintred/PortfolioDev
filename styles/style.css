@@ -1,0 +1,174 @@
+body {
+    margin: 10px 20px 10px 20px;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #f3c742 ;
+}
+
+#logo {
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    position: fixed; /* Fix the navigation bar */
+    top: 0;
+    right: 10px;
+    padding: 10px;
+}
+
+#menu {
+    color:black;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+#menu:hover{
+    color: #ffffbd;
+}
+
+.wrapper {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.wrapper .static-txt {
+    font-size: 60px;
+    
+}
+
+.dynamic-texts li{
+    list-style: none;
+    font-size: 60px;
+    color: #ffffbd; 
+    position: relative;
+    top:0;
+    animation: slide 11s steps(6) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -480px;
+    }
+}
+
+
+.wrapper .dynamic-texts {
+    margin-top: -5px;
+    height: 80px;
+    margin-left: -40px;
+    line-height:80px;
+    overflow: hidden; 
+    
+
+}
+
+.dynamic-texts li span {
+    position: relative;
+
+}
+
+.dynamic-texts li span::after{
+    content:"";
+    position: absolute;
+    height:100%;
+    width: 100%;
+    background:#f3c742;
+    border-left: 2px solid #ffffbd;
+    left: 0;
+    animation: typing 1.833333333s steps(9) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+}
+
+#menuNav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off screen */
+    width: 250px; /* Adjust as needed */
+    transition: right 0.3s ease; /* Transition for smooth sliding */
+}
+
+#menuList {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#menuList li {
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 100;
+    
+}
+
+#menuList li a {
+    text-decoration: none;
+    color: black; /* Link color */
+}
+
+#menuList li a:hover {
+    color: #ffffbd; /* Hover color */
+}
+
+#closeMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #333; /* Cross button color */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transition for color change */
+}
+
+#closeMenu:hover {
+    color: #ffffbd; /* Cross button color on hover */
+}
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    
+}
+
+.container {
+    border: 2px;
+    border-radius: 20px;
+    padding: 0; /* Remove padding to make sure the image fills the container */
+    max-width: 60%; /* Adjust as needed */
+    height: 50%;
+    overflow: hidden;
+    position: relative; /* Positioning context for the text overlay */
+    border: 1px solid #ffffbd;
+}
+
+
+
+
+.container img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+
