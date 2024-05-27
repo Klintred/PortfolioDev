@@ -15,9 +15,9 @@ body {
 
 nav {
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end; 
     align-items: center;
-    position: fixed; /* Fix the navigation bar */
+    position: fixed; 
     top: 0;
     right: 10px;
     
@@ -53,9 +53,9 @@ nav {
 #menuNav {
     position: fixed;
     top: 0;
-    right: -300px; /* Initially off screen */
-    width: 250px; /* Adjust as needed */
-    transition: right 0.3s ease; /* Transition for smooth sliding */
+    right: -300px; 
+    width: 250px; 
+    transition: right 0.3s ease; 
 }
 
 #menuList {
@@ -73,11 +73,11 @@ nav {
 
 #menuList li a {
     text-decoration: none;
-    color: black; /* Link color */
+    color: black;
 }
 
 #menuList li a:hover {
-    color: #ffffbd; /* Hover color */
+    color: #ffffbd; 
 }
 
 #closeMenu {
@@ -86,14 +86,14 @@ nav {
     right: 20px;
     background-color: transparent;
     border: none;
-    color: #333; /* Cross button color */
+    color: #333;
     font-size: 24px;
     cursor: pointer;
-    transition: color 0.3s ease; /* Transition for color change */
+    transition: color 0.3s ease; 
 }
 
 #closeMenu:hover {
-    color: #ffffbd; /* Cross button color on hover */
+    color: #ffffbd; 
 }
 
 #work {
@@ -113,7 +113,7 @@ nav {
 
 .works {
     display: flex;
-    justify-content: flex-start; /* Align content to the start (left) */
+    justify-content: flex-start; 
     align-items: center;
     flex-direction: column;
 }

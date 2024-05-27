@@ -4,21 +4,21 @@ let closeMenuButton = document.querySelector("#closeMenu");
 
 menu.addEventListener("click", function(e) {
     e.preventDefault();
-    menuNav.style.right = "0"; // Slide the menu in from the right
-    menu.style.display = "none"; // Hide the menu button
+    menuNav.style.right = "0"; 
+    menu.style.display = "none"; 
 });
 
 closeMenuButton.addEventListener("click", function(e) {
     e.preventDefault();
-    menuNav.style.right = "-300px"; // Slide the menu out to the right
-    menu.style.display = "inline-block"; // Show the menu button
+    menuNav.style.right = "-300px"; 
+    menu.style.display = "inline-block"; 
 });
 
-// Close the menu when clicking outside of it
+
 document.addEventListener("click", function(e) {
     if (!menuNav.contains(e.target) && e.target !== menu) {
-        menuNav.style.right = "-300px"; // Slide the menu out to the right
-        menu.style.display = "inline-block"; // Show the menu button
+        menuNav.style.right = "-300px"; 
+        menu.style.display = "inline-block"; 
     }
 });
 
@@ -52,22 +52,22 @@ const imageList = [
 
 ];
 
-// Index to keep track of the current image
+
 let currentIndex = 0;
 
-// Function to change the image
+
 function changeImage() {
-    // Get the image element
+    
     const imageElement = document.getElementById("slideshowImage");
     
-    // Increment the index or reset if reached the end of the image list
+   
     currentIndex = (currentIndex + 1) % imageList.length;
     
-    // Set the new image source
+    
     imageElement.src = "images/" + imageList[currentIndex];
 }
 
-// Call the changeImage function every 0.5 seconds
+
 setInterval(changeImage, 500);
 
 const projects = document.querySelector('.projects');

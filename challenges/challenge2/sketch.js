@@ -5,18 +5,18 @@ let modelLoaded = false;
 let balls = [];
 let interactionRadius = 20;
 let score = 0;
-let gameTimer = 60; // Game duration in seconds
+let gameTimer = 60; 
 let startTime;
 let gameOver = false;
 let gameStarted = false;
 
-// Buffer for recent index finger positions
+
 let indexFingerBuffer = [];
 const bufferSize = 5;
 
 function setup() {
   let canvas = createCanvas(640, 480);
-  canvas.parent('canvasContainer'); // Attach canvas to the container
+  canvas.parent('canvasContainer'); 
   video = createCapture(VIDEO);
   video.size(640, 480);
 
@@ -33,7 +33,7 @@ function setup() {
   document.getElementById('backButton').addEventListener('click', hideInstructions);
   document.getElementById('restartButton').addEventListener('click', restartGame);
 
-  // Hide score and timer initially
+
   document.querySelector('.header').style.display = 'none';
 }
 
@@ -47,10 +47,10 @@ function draw() {
 
   background(220);
 
-  // Draw flipped video at the center of the canvas
+
   push();
-  translate(width, 0); // Move the origin to the top-right corner
-  scale(-1, 1); // Flip the x-axis
+  translate(width, 0); 
+  scale(-1, 1); 
   image(video, 0, 0, width, height);
   pop();
 
@@ -86,17 +86,16 @@ function draw() {
 function drawIndexFingerTip() {
   if (predictions.length > 0) {
     const keypoints = predictions[0].landmarks;
-    const [x, y, z] = keypoints[8]; // Index finger tip
+    const [x, y, z] = keypoints[8]; 
 
-    // Add to buffer
     indexFingerBuffer.push([x, y]);
 
-    // Maintain buffer size
+    
     if (indexFingerBuffer.length > bufferSize) {
       indexFingerBuffer.shift();
     }
 
-    // Calculate average position
+
     let avgX = 0;
     let avgY = 0;
     for (let i = 0; i < indexFingerBuffer.length; i++) {
@@ -106,19 +105,19 @@ function drawIndexFingerTip() {
     avgX /= indexFingerBuffer.length;
     avgY /= indexFingerBuffer.length;
 
-    // Draw the smoothed position
+    
     fill(0, 255, 0);
     noStroke();
-    ellipse(width - avgX, avgY, 10, 10); // Adjust position for flipped video
+    ellipse(width - avgX, avgY, 10, 10); 
   }
 }
 
 function checkInteractions() {
   if (indexFingerBuffer.length > 0) {
-    const [indexX, indexY] = indexFingerBuffer[indexFingerBuffer.length - 1]; // Use the latest buffered position
-    const adjustedIndexX = width - indexX; // Adjust x position for flipped video
+    const [indexX, indexY] = indexFingerBuffer[indexFingerBuffer.length - 1]; 
+    const adjustedIndexX = width - indexX;
 
-    // Check for breaking objects
+    
     for (let ball of balls) {
       ball.checkHit(adjustedIndexX, indexY);
     }
@@ -142,7 +141,7 @@ class Ball {
   }
 
   update() {
-    // Ball logic can go here if needed
+
   }
 
   display() {
@@ -157,14 +156,14 @@ class Ball {
     if (!this.isBroken) {
       let d = dist(px, py, this.x, this.y);
       if (d < this.r + interactionRadius) {
-        this.isBroken = true; // Break the ball
-        score += 1; // Increase score
+        this.isBroken = true; 
+        score += 1;
       }
     }
   }
 
   isExpired() {
-    // Check if the ball has existed for more than 3 seconds
+    
     return millis() - this.spawnTime > 3000;
   }
 }
@@ -187,9 +186,9 @@ function startGame() {
   startTime = millis();
   score = 0;
   gameOver = false;
-  balls = []; // Reset the balls array
-  setInterval(spawnBall, 1000); // Spawn a new ball every second
-  loop(); // Start the draw loop
+  balls = []; 
+  setInterval(spawnBall, 1000); 
+  loop(); 
 }
 
 function showInstructions() {

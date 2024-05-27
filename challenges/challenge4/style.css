@@ -8,7 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  text-align: center; /* Added to center the title */
+  text-align: center; 
 }
 
 #gameTitle {
@@ -70,7 +70,7 @@ section.data {}
   }
 }
 
-/* New styles for question form */
+
 .question {
   background-color: #ffffbd;
   color: #f3c742;

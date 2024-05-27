@@ -100,7 +100,7 @@ function checkAnswer(speechResult) {
     speakResult('Wrong!');
   }
 
-  setTimeout(nextQuestion, 2000); // Wait for 2 seconds before moving to the next question
+  setTimeout(nextQuestion, 2000); 
 }
 
 function speakResult(resultText) {
